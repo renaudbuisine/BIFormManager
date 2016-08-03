@@ -1,16 +1,14 @@
 //
-//  UISwitch+FormManager.m
+//  UIStepper+FormManager.m
 //  BIFormManagerKit
 //
-//  Created by Renaud Buisine on 21/03/16.
+//  Created by Renaud BUISINE on 28/07/16.
 //  Copyright © 2016 Renaud Buisine. All rights reserved.
 //
 
-#import "UISwitch+FormManager.h"
-#import "UIControl+FormManager.h"
-#import "BIFormManagerLogging.h"
+#import "UIStepper+FormManager.h"
 
-@implementation UISwitch (FormManager)
+@implementation UIStepper (FormManager)
 
 /**
  *  Is data of control valid and not Nil
@@ -20,7 +18,7 @@
  */
 - (BOOL)isDataValid{
     // if switch is required, must be turned on
-    return self.on;
+    return YES;
 }
 /**
  *  Get data object from control
@@ -28,7 +26,7 @@
  *  @return Data object (String, number,...)
  */
 - (id)contentData{
-    return @(self.on);
+    return @(self.value);
 }
 
 /**
@@ -38,11 +36,12 @@
  */
 - (void)setContentData:(id)data{
     if([data isKindOfClass:NSNumber.class]){
-        self.on = [data boolValue];
+        self.value = [data doubleValue];
     }
     else{
         LOG_WARNING(@"Expected data of kind NSNumber!");
     }
 }
+
 
 @end

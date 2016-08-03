@@ -1,15 +1,14 @@
 //
-//  UIControl+Extended.h
+//  UITextView+FormManager.h
 //  BIFormManagerKit
 //
-//  Created by Renaud Buisine on 20/03/16.
+//  Created by Renaud BUISINE on 28/07/16.
 //  Copyright © 2016 Renaud Buisine. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "BIFormManagerLogging.h"
 
-@interface UIControl (FormManager)
+@interface UITextView (FormManager)
 
 /**
  *  Is control required in a form?
@@ -24,12 +23,6 @@
  *  Data of control (NSString for textfields, ...)
  */
 @property (nonatomic, weak) id contentData;
-
-/**
- *  Event to test to trigger control's value changed
- */
-@property (nonatomic, assign, readonly) UIControlEvents valueChangedEvent;
-
 
 /**
  *  Is data of control valid and not Nil
@@ -54,5 +47,6 @@
  *  Display control as unvalid
  */
 - (void)setUnvalid;
+
 
 @end

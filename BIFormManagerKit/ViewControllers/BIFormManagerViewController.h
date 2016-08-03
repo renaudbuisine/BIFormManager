@@ -12,46 +12,94 @@
 
 
 @interface BIFormManagerViewController : UIViewController
-/**
- *  Is form valid?
- */
-@property (nonatomic,readonly) BOOL formValid;
+
 
 /**
- *  Force form checking
+ *  Array to stack all required fields in view of current form
  */
-- (void)checkValidity;
+@property (nonatomic, strong, readonly) NSSet *_Nullable requiredControls;
 /**
- *  When controller is going to check controls values
+ *  Array of all optional fields
  */
-- (void)willCheckForm;
+@property (nonatomic, strong, readonly) NSSet *_Nullable optionalControls;
+/**
+ *  All fields of form
+ */
+@property (nonatomic, weak, readonly) NSSet *_Nullable formControls;
+/**
+ *  List of fields whose content is unvalid
+ */
+@property (nonatomic, weak, readonly) NSSet *_Nullable unvalidControls;
+
+/**
+ *  When specific control went unvalid
+ *
+ *  @param control Concerned control
+ */
+- (void)controlFailedValidating:(nonnull id)control;
+/**
+ *  When specific control went valid
+ *
+ *  @param control Concerned control
+ */
+- (void)controlSucceededValidating:(nonnull id)control;
 /**
  *  When form went valid
  */
-- (void)didValidForm;
+- (void)succeededValidating;
 /**
  *  When form went unvalid
  */
-- (void)didUnvalidForm;
+- (void)failedValidating;
 /**
  *  Is provided control required for form
  *
  *  @param control        Concerned control
  */
-- (BOOL)isControlRequired:(UIControl *)control;
+- (BOOL)isControlRequired:(nonnull id)control;
 /**
  *  Is procided control valid for form
  *
  *  @param control        Concerned control
  */
-- (BOOL)isControlValid:(UIControl *)control;
+- (BOOL)isControlValid:(nonnull id)control;
 /**
- *  Is form valid
- *  Used to force status by overriding it
+ *  Called to indicate if form should be submitted even if fields are correct (use for additional tests)
  *
- *  @return Is form valid?
+ *  @return Should or not
  */
-- (BOOL)isFormValid;
+- (BOOL)shouldSubmitForm;
+/**
+ *  When form is going to be submitted
+ */
+- (void)willSubmitForm;
+/**
+ *  Called to apply necessary action for form submission
+ */
+- (void)submitForm;
+/**
+ *  After form is submitted
+ */
+- (void)didSubmitForm;
+/**
+ *  Try submit form (does not considere valid information of controls)
+ */
+- (void)trySubmit;
+/**
+ *  Submit  (does not considere valid information of controls)
+ */
+- (void)forceSubmit;
+/**
+ *  Build dictionary based on controls of form
+ *
+ *  @return Form key/value dictionary
+ */
+- (nonnull NSDictionary *)dictionaryFromForm;
+/**
+ *  Update form contents from data in dictionary
+ *
+ *  @param formDictionary Dictionary with content
+ */
+- (void)updateWithDictionary:(nonnull NSDictionary *)formDictionary;
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context;
 @end

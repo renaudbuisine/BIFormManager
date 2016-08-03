@@ -12,35 +12,60 @@
 
 @implementation UITextField (FormManager)
 
-
 /**
- *  Add key target on control
+ *  Is data of control valid and not Nil
+ *  Ex : UItextfield, is there text AND with correct format
  *
- *  @param target Target object
- *  @param action Selector to call
+ *  @return Valid and not nil ?
  */
-- (void)addTarget:(NSObject *)target action:(nonnull SEL)action{
-    // do nothing
-    [self addTarget:target action:action forControlEvents:UIControlEventEditingChanged];
+- (BOOL)isDataValid{
+    NSString *content = self.contentData;
+    if(content){
+        if(self.keyboardType == UIKeyboardTypePhonePad){
+            return [content isValidPhoneNumber];
+        }
+        else if(self.keyboardType == UIKeyboardTypeEmailAddress){
+            return [content isValidEmail];
+        }
+        return YES;
+    }
+    return NO;
 }
 
 /**
- *  Is current control filled for form
- *  Examples :
- *      TextField => is there a text inside?
- *      ...
+ *  Get data object from control
  *
- *  @return Is current control filled?
+ *  @return Data object (String, number,...)
  */
-- (BOOL)isControlFilled{
-    if([self.text length] == 0){
-        return NO;
+- (id)contentData{
+    if(self.text && self.text.length){
+        return self.text;
     }
-    // is email keyboard, lets check format of text
-    if(self.keyboardType == UIKeyboardTypeEmailAddress){
-        return [self.text isValidEmail];
+    return nil;
+}
+
+/**
+ *  Set data into control object
+ *
+ *  @param data Data to insert
+ */
+- (void)setContentData:(id)data{
+    if([data isKindOfClass:NSString.class]){
+        self.text = data;
     }
-    return YES;
+    else{
+        LOG_WARNING(@"Expected data of kind NSString!");
+    }
+}
+
+#pragma mark EVENTS
+
+
+/**
+ *  Event to test to trigger control's value changed
+ */
+- (UIControlEvents)valueChangedEvent{
+    return UIControlEventEditingChanged;
 }
 
 @end

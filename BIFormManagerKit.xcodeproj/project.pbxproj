@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE33B8B61D48F0170054D57C /* FormResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8B51D48F0170054D57C /* FormResultViewController.m */; };
+		AE33B8BA1D48F15C0054D57C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8B91D48F15C0054D57C /* CustomTextField.m */; };
+		AE33B8BD1D49EE010054D57C /* UISlider+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8BB1D49EE010054D57C /* UISlider+FormManager.h */; };
+		AE33B8BE1D49EE010054D57C /* UISlider+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8BC1D49EE010054D57C /* UISlider+FormManager.m */; };
+		AE33B8BF1D49EE010054D57C /* UISlider+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8BC1D49EE010054D57C /* UISlider+FormManager.m */; };
+		AE33B8C31D49EECB0054D57C /* UISegmentedControl+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8C11D49EECB0054D57C /* UISegmentedControl+FormManager.h */; };
+		AE33B8C41D49EECB0054D57C /* UISegmentedControl+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8C21D49EECB0054D57C /* UISegmentedControl+FormManager.m */; };
+		AE33B8C51D49EECB0054D57C /* UISegmentedControl+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8C21D49EECB0054D57C /* UISegmentedControl+FormManager.m */; };
+		AE33B8C81D49F1AA0054D57C /* UIPageControl+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8C61D49F1AA0054D57C /* UIPageControl+FormManager.h */; };
+		AE33B8C91D49F1AA0054D57C /* UIPageControl+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8C71D49F1AA0054D57C /* UIPageControl+FormManager.m */; };
+		AE33B8CA1D49F1AA0054D57C /* UIPageControl+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8C71D49F1AA0054D57C /* UIPageControl+FormManager.m */; };
+		AE33B8CD1D49F23A0054D57C /* UIStepper+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8CB1D49F23A0054D57C /* UIStepper+FormManager.h */; };
+		AE33B8CE1D49F23A0054D57C /* UIStepper+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8CC1D49F23A0054D57C /* UIStepper+FormManager.m */; };
+		AE33B8CF1D49F23A0054D57C /* UIStepper+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8CC1D49F23A0054D57C /* UIStepper+FormManager.m */; };
+		AE33B8D31D49F3D20054D57C /* UIDatePicker+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8D11D49F3D20054D57C /* UIDatePicker+FormManager.h */; };
+		AE33B8D41D49F3D20054D57C /* UIDatePicker+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8D21D49F3D20054D57C /* UIDatePicker+FormManager.m */; };
+		AE33B8D51D49F3D20054D57C /* UIDatePicker+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8D21D49F3D20054D57C /* UIDatePicker+FormManager.m */; };
+		AE33B8D81D49F5210054D57C /* UITextView+FormManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE33B8D61D49F5210054D57C /* UITextView+FormManager.h */; };
+		AE33B8D91D49F5210054D57C /* UITextView+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8D71D49F5210054D57C /* UITextView+FormManager.m */; };
+		AE33B8DA1D49F5210054D57C /* UITextView+FormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33B8D71D49F5210054D57C /* UITextView+FormManager.m */; };
 		AECD33831C9EF8FD00AE1EA8 /* BIFormManagerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AECD33821C9EF8FD00AE1EA8 /* BIFormManagerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AECD33921C9EF94400AE1EA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AECD33911C9EF94400AE1EA8 /* main.m */; };
 		AECD33951C9EF94400AE1EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AECD33941C9EF94400AE1EA8 /* AppDelegate.m */; };
@@ -38,6 +58,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE33B8B41D48F0170054D57C /* FormResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormResultViewController.h; sourceTree = "<group>"; };
+		AE33B8B51D48F0170054D57C /* FormResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormResultViewController.m; sourceTree = "<group>"; };
+		AE33B8B81D48F15C0054D57C /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		AE33B8B91D48F15C0054D57C /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		AE33B8BB1D49EE010054D57C /* UISlider+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISlider+FormManager.h"; path = "Categories/UISlider+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8BC1D49EE010054D57C /* UISlider+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISlider+FormManager.m"; path = "Categories/UISlider+FormManager.m"; sourceTree = "<group>"; };
+		AE33B8C11D49EECB0054D57C /* UISegmentedControl+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+FormManager.h"; path = "Categories/UISegmentedControl+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8C21D49EECB0054D57C /* UISegmentedControl+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+FormManager.m"; path = "Categories/UISegmentedControl+FormManager.m"; sourceTree = "<group>"; };
+		AE33B8C61D49F1AA0054D57C /* UIPageControl+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPageControl+FormManager.h"; path = "Categories/UIPageControl+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8C71D49F1AA0054D57C /* UIPageControl+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIPageControl+FormManager.m"; path = "Categories/UIPageControl+FormManager.m"; sourceTree = "<group>"; };
+		AE33B8CB1D49F23A0054D57C /* UIStepper+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIStepper+FormManager.h"; path = "Categories/UIStepper+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8CC1D49F23A0054D57C /* UIStepper+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIStepper+FormManager.m"; path = "Categories/UIStepper+FormManager.m"; sourceTree = "<group>"; };
+		AE33B8D11D49F3D20054D57C /* UIDatePicker+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDatePicker+FormManager.h"; path = "Categories/UIDatePicker+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8D21D49F3D20054D57C /* UIDatePicker+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDatePicker+FormManager.m"; path = "Categories/UIDatePicker+FormManager.m"; sourceTree = "<group>"; };
+		AE33B8D61D49F5210054D57C /* UITextView+FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+FormManager.h"; path = "Categories/UITextView+FormManager.h"; sourceTree = "<group>"; };
+		AE33B8D71D49F5210054D57C /* UITextView+FormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+FormManager.m"; path = "Categories/UITextView+FormManager.m"; sourceTree = "<group>"; };
+		AE954E581D180EE800B9E443 /* BIFormManagerLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIFormManagerLogging.h; sourceTree = "<group>"; };
 		AECD337F1C9EF8FD00AE1EA8 /* BIFormManagerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BIFormManagerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECD33821C9EF8FD00AE1EA8 /* BIFormManagerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIFormManagerKit.h; sourceTree = "<group>"; };
 		AECD33841C9EF8FD00AE1EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +147,7 @@
 				AECD33A51C9EF9A300AE1EA8 /* Categories */,
 				AECD33821C9EF8FD00AE1EA8 /* BIFormManagerKit.h */,
 				AECD33841C9EF8FD00AE1EA8 /* Info.plist */,
+				AE954E581D180EE800B9E443 /* BIFormManagerLogging.h */,
 			);
 			path = BIFormManagerKit;
 			sourceTree = "<group>";
@@ -126,6 +164,10 @@
 				AECD339E1C9EF94400AE1EA8 /* LaunchScreen.storyboard */,
 				AECD33A11C9EF94400AE1EA8 /* Info.plist */,
 				AECD33901C9EF94400AE1EA8 /* Supporting Files */,
+				AE33B8B41D48F0170054D57C /* FormResultViewController.h */,
+				AE33B8B51D48F0170054D57C /* FormResultViewController.m */,
+				AE33B8B81D48F15C0054D57C /* CustomTextField.h */,
+				AE33B8B91D48F15C0054D57C /* CustomTextField.m */,
 			);
 			path = BIFormManagerSamples;
 			sourceTree = "<group>";
@@ -153,6 +195,18 @@
 				AECD33C11C9F67CB00AE1EA8 /* UISwitch+FormManager.m */,
 				AECD33C51C9F67DD00AE1EA8 /* UIButton+FormManager.h */,
 				AECD33C61C9F67DD00AE1EA8 /* UIButton+FormManager.m */,
+				AE33B8BB1D49EE010054D57C /* UISlider+FormManager.h */,
+				AE33B8BC1D49EE010054D57C /* UISlider+FormManager.m */,
+				AE33B8C11D49EECB0054D57C /* UISegmentedControl+FormManager.h */,
+				AE33B8C21D49EECB0054D57C /* UISegmentedControl+FormManager.m */,
+				AE33B8C61D49F1AA0054D57C /* UIPageControl+FormManager.h */,
+				AE33B8C71D49F1AA0054D57C /* UIPageControl+FormManager.m */,
+				AE33B8CB1D49F23A0054D57C /* UIStepper+FormManager.h */,
+				AE33B8CC1D49F23A0054D57C /* UIStepper+FormManager.m */,
+				AE33B8D11D49F3D20054D57C /* UIDatePicker+FormManager.h */,
+				AE33B8D21D49F3D20054D57C /* UIDatePicker+FormManager.m */,
+				AE33B8D61D49F5210054D57C /* UITextView+FormManager.h */,
+				AE33B8D71D49F5210054D57C /* UITextView+FormManager.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -173,14 +227,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE33B8C31D49EECB0054D57C /* UISegmentedControl+FormManager.h in Headers */,
 				AECD33C71C9F67DD00AE1EA8 /* UIButton+FormManager.h in Headers */,
+				AE33B8D81D49F5210054D57C /* UITextView+FormManager.h in Headers */,
+				AE33B8D31D49F3D20054D57C /* UIDatePicker+FormManager.h in Headers */,
 				AECD33B31C9EFF4F00AE1EA8 /* UIView+FormManager.h in Headers */,
 				AECD33AE1C9EFE0600AE1EA8 /* BIFormManagerViewController.h in Headers */,
+				AE33B8CD1D49F23A0054D57C /* UIStepper+FormManager.h in Headers */,
 				AECD33BD1C9F534400AE1EA8 /* NSString+FormManager.h in Headers */,
+				AE33B8BD1D49EE010054D57C /* UISlider+FormManager.h in Headers */,
 				AECD33C21C9F67CB00AE1EA8 /* UISwitch+FormManager.h in Headers */,
 				AECD33B81C9F51F600AE1EA8 /* UITextField+FormManager.h in Headers */,
 				AECD33831C9EF8FD00AE1EA8 /* BIFormManagerKit.h in Headers */,
 				AECD33A81C9EF9CD00AE1EA8 /* UIControl+FormManager.h in Headers */,
+				AE33B8C81D49F1AA0054D57C /* UIPageControl+FormManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +346,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECD33B41C9EFF4F00AE1EA8 /* UIView+FormManager.m in Sources */,
+				AE33B8C41D49EECB0054D57C /* UISegmentedControl+FormManager.m in Sources */,
 				AECD33B91C9F51F600AE1EA8 /* UITextField+FormManager.m in Sources */,
 				AECD33A91C9EF9CD00AE1EA8 /* UIControl+FormManager.m in Sources */,
 				AECD33C81C9F67DD00AE1EA8 /* UIButton+FormManager.m in Sources */,
+				AE33B8BE1D49EE010054D57C /* UISlider+FormManager.m in Sources */,
+				AE33B8CE1D49F23A0054D57C /* UIStepper+FormManager.m in Sources */,
+				AE33B8C91D49F1AA0054D57C /* UIPageControl+FormManager.m in Sources */,
 				AECD33C31C9F67CB00AE1EA8 /* UISwitch+FormManager.m in Sources */,
+				AE33B8D41D49F3D20054D57C /* UIDatePicker+FormManager.m in Sources */,
 				AECD33BE1C9F534400AE1EA8 /* NSString+FormManager.m in Sources */,
 				AECD33AF1C9EFE0600AE1EA8 /* BIFormManagerViewController.m in Sources */,
+				AE33B8D91D49F5210054D57C /* UITextView+FormManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,12 +369,20 @@
 				AECD33951C9EF94400AE1EA8 /* AppDelegate.m in Sources */,
 				AECD33AA1C9EF9CD00AE1EA8 /* UIControl+FormManager.m in Sources */,
 				AECD33C41C9F67CB00AE1EA8 /* UISwitch+FormManager.m in Sources */,
+				AE33B8BA1D48F15C0054D57C /* CustomTextField.m in Sources */,
 				AECD33BF1C9F534400AE1EA8 /* NSString+FormManager.m in Sources */,
+				AE33B8CA1D49F1AA0054D57C /* UIPageControl+FormManager.m in Sources */,
+				AE33B8C51D49EECB0054D57C /* UISegmentedControl+FormManager.m in Sources */,
 				AECD33C91C9F67DD00AE1EA8 /* UIButton+FormManager.m in Sources */,
+				AE33B8D51D49F3D20054D57C /* UIDatePicker+FormManager.m in Sources */,
+				AE33B8B61D48F0170054D57C /* FormResultViewController.m in Sources */,
 				AECD33BA1C9F51F600AE1EA8 /* UITextField+FormManager.m in Sources */,
 				AECD33B51C9EFF4F00AE1EA8 /* UIView+FormManager.m in Sources */,
+				AE33B8DA1D49F5210054D57C /* UITextView+FormManager.m in Sources */,
 				AECD33921C9EF94400AE1EA8 /* main.m in Sources */,
+				AE33B8CF1D49F23A0054D57C /* UIStepper+FormManager.m in Sources */,
 				AECD33B01C9EFE0600AE1EA8 /* BIFormManagerViewController.m in Sources */,
+				AE33B8BF1D49EE010054D57C /* UISlider+FormManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +578,7 @@
 				AECD33A31C9EF94400AE1EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

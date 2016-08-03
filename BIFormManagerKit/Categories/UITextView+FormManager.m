@@ -1,34 +1,35 @@
 //
-//  UIControl+Extended.m
+//  UITextView+FormManager.m
 //  BIFormManagerKit
 //
-//  Created by Renaud Buisine on 20/03/16.
+//  Created by Renaud BUISINE on 28/07/16.
 //  Copyright © 2016 Renaud Buisine. All rights reserved.
 //
 
-#import "UIControl+FormManager.h"
+#import "UITextView+FormManager.h"
 #import <objc/runtime.h>
+#import "BIFormManagerLogging.h"
 
-@implementation UIControl (FormManager)
+@implementation UITextView (FormManager)
 
-static char UIControl_requiredPropertyKey;
-static char UIControl_controlIdentifierPropertyKey;
+static char UITextView_requiredPropertyKey;
+static char UITextView_controlIdentifierPropertyKey;
 
 - (BOOL)required{
-    NSNumber *required = objc_getAssociatedObject(self, &UIControl_requiredPropertyKey);
+    NSNumber *required = objc_getAssociatedObject(self, &UITextView_requiredPropertyKey);
     return [required boolValue];
 }
 
 - (void)setRequired:(BOOL)required{
-    objc_setAssociatedObject(self, &UIControl_requiredPropertyKey, @(required), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &UITextView_requiredPropertyKey, @(required), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (NSString *)controlIdentifier{
-    return objc_getAssociatedObject(self, &UIControl_controlIdentifierPropertyKey);
+    return objc_getAssociatedObject(self, &UITextView_controlIdentifierPropertyKey);
 }
 
 - (void)setControlIdentifier:(NSString *)controlIdentifier{
-    objc_setAssociatedObject(self, &UIControl_controlIdentifierPropertyKey, controlIdentifier, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, &UITextView_controlIdentifierPropertyKey, controlIdentifier, OBJC_ASSOCIATION_RETAIN);
 }
 
 /**
@@ -39,7 +40,7 @@ static char UIControl_controlIdentifierPropertyKey;
  */
 - (BOOL)isDataValid{
     // default
-    return NO;
+    return self.contentData;
 }
 /**
  *  Is data of control valid or Nil
@@ -73,7 +74,7 @@ static char UIControl_controlIdentifierPropertyKey;
  */
 - (id)contentData{
     // default
-    return nil;
+    return self.text;
 }
 /**
  *  Set data into control object
@@ -81,14 +82,13 @@ static char UIControl_controlIdentifierPropertyKey;
  *  @param data Data to insert
  */
 - (void)setContentData:(id)data{
-    // do nothing
-}
-
-/**
- *  Event to test to trigger control's value changed
- */
-- (UIControlEvents)valueChangedEvent{
-    return UIControlEventValueChanged;
+    if([data isKindOfClass:NSString.class]){
+        self.text = data;
+    }
+    else{
+        self.text = nil;
+        LOG_WARNING(@"Expected data of kind NSString!");
+    }
 }
 
 @end

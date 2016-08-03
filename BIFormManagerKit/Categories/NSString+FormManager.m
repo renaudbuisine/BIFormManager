@@ -15,10 +15,31 @@
  *
  *  @return Valid email format?
  */
-- (BOOL) isValidEmail{
+- (BOOL)isValidEmail{
     NSString *emailRegex = @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:self];
+    return [self matchRegex:emailRegex];
+}
+
+/**
+ *  Is string valid phone number?
+ *
+ *  @return Valid phone number format?
+ */
+- (BOOL)isValidPhoneNumber{
+    NSString *phoneNumberRegex = @"^\\+?(?:[0-9] ?){6,14}[0-9]$";
+    return [self matchRegex:phoneNumberRegex];
+}
+
+/**
+ *  Does string match regex
+ *
+ *  @param regex Regex string used to check
+ *
+ *  @return String does match or not
+ */
+- (BOOL)matchRegex:(nonnull NSString *)regex{
+    NSPredicate *regexTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [regexTest evaluateWithObject:self];
 }
 
 @end

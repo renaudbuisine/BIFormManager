@@ -23,9 +23,9 @@
     for(UIView *sv in self.subviews){
         if([sv isKindOfClass:aClass]){
             [subviews addObject:sv];
-            if(recursive){
-                [subviews addObjectsFromArray:[sv viewsKindOfClass:aClass recursively:recursive]];
-            }
+        }
+        else if(recursive){
+            [subviews addObjectsFromArray:[sv viewsKindOfClass:aClass recursively:recursive]];
         }
     }
     return subviews;

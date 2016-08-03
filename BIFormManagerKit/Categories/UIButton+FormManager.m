@@ -7,17 +7,25 @@
 //
 
 #import "UIButton+FormManager.h"
+#import "UIControl+FormManager.h"
 
 @implementation UIButton (FormManager)
 
 /**
- *  Add key target on control
+ *  Override because a button cannot be required
  *
- *  @param target Target object
- *  @param action Selector to call
+ *  @param required required value
  */
-- (void)addTarget:(NSObject *)target action:(nonnull SEL)action{
-    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+- (void)setRequired:(BOOL)required{
+}
+
+/**
+ *  Override to return always NO
+ *
+ *  @return NO
+ */
+- (BOOL)required{
+    return NO;
 }
 
 @end

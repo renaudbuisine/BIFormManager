@@ -7,59 +7,62 @@
 //
 
 #import "ViewController.h"
+#import "FormResultViewController.h"
 
 @interface ViewController (){
-    
-    __weak IBOutlet UITextView *_aboutTextView;
-    __weak IBOutlet UITextField *_emailTextField;
-    __weak IBOutlet UITextField *_lastNameTextField;
-    __weak IBOutlet UITextField *_fistNameTextField;
-    __weak IBOutlet UISwitch *_conditionsSwitch;
     __weak IBOutlet UIButton *_submitButton;
+    __weak IBOutlet UILabel *_stepperValueLabel;
 }
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark BIFormManagerViewController
 
-- (void)didValidForm{
+- (void)controlFailedValidating:(UIControl *)control{
+    
+}
+
+- (void)controlSucceededValidating:(UIControl *)control{
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    NSDictionary *formDictionary = @{@"email":@"mail@mail.com",@"lastname":@"NAME"};
+    [self updateWithDictionary:formDictionary];
+}
+
+- (void)succeededValidating{
+    [super succeededValidating];
+    
     _submitButton.enabled = YES;
 }
-- (void)didUnvalidForm{
+
+- (void)failedValidating{
+    [super failedValidating];
+    
     _submitButton.enabled = NO;
-}
-- (BOOL)isControlRequired:(UIControl *)control{
-    return control.tag == 1;
-}
-- (BOOL)isControlValid:(UIControl *)control{
-    if(control == _conditionsSwitch){
-        return _conditionsSwitch.on;
-    }
-    else{
-        return [super isControlValid:control];
-    }
-}
--(BOOL)isFormValid{
-    // let's check textview which is not a control, can do last checkings here !
-    return [super isFormValid] && [_aboutTextView.text length] > 0;
 }
 
 #pragma mark IBAction
 
 - (IBAction)_submit:(id)sender {
     NSLog(@"SUBMITTED !!!!");
+}
+- (IBAction)_updateStepperValue:(UIStepper *)sender {
+    _stepperValueLabel.text = [NSString stringWithFormat:@"%@", sender.contentData];
+}
+
+#pragma mark Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"formSubmission"]){
+        FormResultViewController *vc = segue.destinationViewController;
+        vc.content = [NSString stringWithFormat:@"%@",[self dictionaryFromForm]];
+    }
 }
 
 @end
